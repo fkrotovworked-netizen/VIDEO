@@ -16,6 +16,22 @@
     }
   });
 
+  /* ---------- Лайнап направлений: раскрытие по одному ---------- */
+  var heads = document.querySelectorAll('.lu__head');
+  function setOpen(h, open) {
+    h.setAttribute('aria-expanded', open ? 'true' : 'false');
+    var p = document.getElementById(h.getAttribute('aria-controls'));
+    if (p) { if (open) p.removeAttribute('inert'); else p.setAttribute('inert', ''); }
+  }
+  for (var k = 0; k < heads.length; k++) {
+    setOpen(heads[k], false);
+    heads[k].addEventListener('click', function () {
+      var willOpen = this.getAttribute('aria-expanded') !== 'true';
+      for (var m = 0; m < heads.length; m++) if (heads[m] !== this) setOpen(heads[m], false);
+      setOpen(this, willOpen);
+    });
+  }
+
   /* ---------- Форма заявки ---------- */
   var form = document.querySelector('[data-lead]');
   if (!form) return;

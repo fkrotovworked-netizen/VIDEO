@@ -166,62 +166,195 @@
 
     <!-- 2.5 НАПРАВЛЕНИЯ -->
     <section class="dirs" id="directions" aria-labelledby="dirs-title">
-      <div class="head">
-        <p class="kicker">Групповые направления</p>
-        <h2 class="h2" id="dirs-title" data-lines>Десять направлений — от&nbsp;мягких до&nbsp;жарких</h2>
+      <div class="head head--row">
+        <div>
+          <p class="kicker kicker--light">Групповые направления</p>
+          <h2 class="h2 h2--light" id="dirs-title" data-lines>Десять направлений — от&nbsp;мягких до&nbsp;жарких</h2>
+        </div>
+        <p class="dirs__note">Нажмите на&nbsp;направление — расскажем, что это, и&nbsp;покажем в&nbsp;расписании.</p>
       </div>
-      <ul class="dgrid">
-          <li class="dcard">
-            <h3 class="dcard__name">Пилатес</h3>
-            <p class="dcard__text">Спокойные, точные упражнения на мышцы кора: живот, спину, ягодицы. Выравнивает осанку, подходит для старта с нуля.</p>
-            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="1"><i></i><i></i><i></i>Мягко</span><a class="dcard__go" href="#schedule" data-dir-go="Пилатес">В расписании →</a></p>
+      <ol class="lineup" data-lineup>
+          <li class="lu">
+            <button class="lu__head" type="button" aria-expanded="false" aria-controls="lu-1">
+              <span class="lu__num">01</span>
+              <span class="lu__name">Пилатес</span>
+              <span class="lu__week" aria-label="Когда: Пн 13:00, Вт 18:00, Чт 18:00, Вс 17:00"><span class="lu__d is-on"><b>Пн</b><i>13:00</i></span><span class="lu__d is-on"><b>Вт</b><i>18:00</i></span><span class="lu__d"><b>Ср</b></span><span class="lu__d is-on"><b>Чт</b><i>18:00</i></span><span class="lu__d"><b>Пт</b></span><span class="lu__d"><b>Сб</b></span><span class="lu__d is-on"><b>Вс</b><i>17:00</i></span></span>
+              <span class="lu__lvl" data-lvl="1"><i></i><i></i><i></i><em>Мягко</em></span>
+              <span class="lu__plus" aria-hidden="true"></span>
+            </button>
+            <div class="lu__panel" id="lu-1" role="region" aria-label="Пилатес">
+              <div class="lu__inner">
+                <p class="lu__text">Спокойные, точные упражнения на мышцы кора: живот, спину, ягодицы. Выравнивает осанку, подходит для старта с нуля.</p>
+                <div class="lu__acts">
+                  <a class="btn btn--red btn--sm" href="#schedule" data-dir-go="Пилатес">Смотреть в расписании</a>
+                  <button class="btn btn--ghost btn--sm" type="button" data-book data-book-label="Пилатес — пробное занятие">Записаться на пробное</button>
+                </div>
+              </div>
+            </div>
           </li>
-          <li class="dcard">
-            <h3 class="dcard__name">Стретчинг</h3>
-            <p class="dcard__text">Растяжка всего тела. Мягко возвращает гибкость, снимает зажатость после рабочего дня и силовых.</p>
-            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="1"><i></i><i></i><i></i>Мягко</span><a class="dcard__go" href="#schedule" data-dir-go="Стретчинг">В расписании →</a></p>
+          <li class="lu">
+            <button class="lu__head" type="button" aria-expanded="false" aria-controls="lu-2">
+              <span class="lu__num">02</span>
+              <span class="lu__name">Стретчинг</span>
+              <span class="lu__week" aria-label="Когда: Вт 20:00, Сб 15:30, Сб 17:30"><span class="lu__d"><b>Пн</b></span><span class="lu__d is-on"><b>Вт</b><i>20:00</i></span><span class="lu__d"><b>Ср</b></span><span class="lu__d"><b>Чт</b></span><span class="lu__d"><b>Пт</b></span><span class="lu__d is-on"><b>Сб</b><i>15:30</i><i>17:30</i></span><span class="lu__d"><b>Вс</b></span></span>
+              <span class="lu__lvl" data-lvl="1"><i></i><i></i><i></i><em>Мягко</em></span>
+              <span class="lu__plus" aria-hidden="true"></span>
+            </button>
+            <div class="lu__panel" id="lu-2" role="region" aria-label="Стретчинг">
+              <div class="lu__inner">
+                <p class="lu__text">Растяжка всего тела. Мягко возвращает гибкость, снимает зажатость после рабочего дня и силовых.</p>
+                <div class="lu__acts">
+                  <a class="btn btn--red btn--sm" href="#schedule" data-dir-go="Стретчинг">Смотреть в расписании</a>
+                  <button class="btn btn--ghost btn--sm" type="button" data-book data-book-label="Стретчинг — пробное занятие">Записаться на пробное</button>
+                </div>
+              </div>
+            </div>
           </li>
-          <li class="dcard">
-            <h3 class="dcard__name">Здоровая спина</h3>
-            <p class="dcard__text">Укрепляем мышцы спины и шеи без нагрузки на позвоночник. Для тех, кто много сидит и устаёт от поясницы.</p>
-            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="1"><i></i><i></i><i></i>Мягко</span><a class="dcard__go" href="#schedule" data-dir-go="Здоровая спина">В расписании →</a></p>
+          <li class="lu">
+            <button class="lu__head" type="button" aria-expanded="false" aria-controls="lu-3">
+              <span class="lu__num">03</span>
+              <span class="lu__name">Здоровая спина</span>
+              <span class="lu__week" aria-label="Когда: Пн 20:00, Ср 20:00, Сб 12:30"><span class="lu__d is-on"><b>Пн</b><i>20:00</i></span><span class="lu__d"><b>Вт</b></span><span class="lu__d is-on"><b>Ср</b><i>20:00</i></span><span class="lu__d"><b>Чт</b></span><span class="lu__d"><b>Пт</b></span><span class="lu__d is-on"><b>Сб</b><i>12:30</i></span><span class="lu__d"><b>Вс</b></span></span>
+              <span class="lu__lvl" data-lvl="1"><i></i><i></i><i></i><em>Мягко</em></span>
+              <span class="lu__plus" aria-hidden="true"></span>
+            </button>
+            <div class="lu__panel" id="lu-3" role="region" aria-label="Здоровая спина">
+              <div class="lu__inner">
+                <p class="lu__text">Укрепляем мышцы спины и шеи без нагрузки на позвоночник. Для тех, кто много сидит и устаёт от поясницы.</p>
+                <div class="lu__acts">
+                  <a class="btn btn--red btn--sm" href="#schedule" data-dir-go="Здоровая спина">Смотреть в расписании</a>
+                  <button class="btn btn--ghost btn--sm" type="button" data-book data-book-label="Здоровая спина — пробное занятие">Записаться на пробное</button>
+                </div>
+              </div>
+            </div>
           </li>
-          <li class="dcard">
-            <h3 class="dcard__name">Суперскульпт</h3>
-            <p class="dcard__text">Силовая на всё тело с отягощениями и собственным весом. Много повторений — тонус и рельеф.</p>
-            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="2"><i></i><i></i><i></i>Средне</span><a class="dcard__go" href="#schedule" data-dir-go="Суперскульпт">В расписании →</a></p>
+          <li class="lu">
+            <button class="lu__head" type="button" aria-expanded="false" aria-controls="lu-4">
+              <span class="lu__num">04</span>
+              <span class="lu__name">Суперскульпт</span>
+              <span class="lu__week" aria-label="Когда: Пн 18:00, Вт 19:00, Пт 17:00, Пт 18:00"><span class="lu__d is-on"><b>Пн</b><i>18:00</i></span><span class="lu__d is-on"><b>Вт</b><i>19:00</i></span><span class="lu__d"><b>Ср</b></span><span class="lu__d"><b>Чт</b></span><span class="lu__d is-on"><b>Пт</b><i>17:00</i><i>18:00</i></span><span class="lu__d"><b>Сб</b></span><span class="lu__d"><b>Вс</b></span></span>
+              <span class="lu__lvl" data-lvl="2"><i></i><i></i><i></i><em>Средне</em></span>
+              <span class="lu__plus" aria-hidden="true"></span>
+            </button>
+            <div class="lu__panel" id="lu-4" role="region" aria-label="Суперскульпт">
+              <div class="lu__inner">
+                <p class="lu__text">Силовая на всё тело с отягощениями и собственным весом. Много повторений — тонус и рельеф.</p>
+                <div class="lu__acts">
+                  <a class="btn btn--red btn--sm" href="#schedule" data-dir-go="Суперскульпт">Смотреть в расписании</a>
+                  <button class="btn btn--ghost btn--sm" type="button" data-book data-book-label="Суперскульпт — пробное занятие">Записаться на пробное</button>
+                </div>
+              </div>
+            </div>
           </li>
-          <li class="dcard">
-            <h3 class="dcard__name">Full body</h3>
-            <p class="dcard__text">Все группы мышц за одно занятие: силовые блоки чередуются с кардио. Хорошо для общей формы.</p>
-            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="3"><i></i><i></i><i></i>Интенсивно</span><a class="dcard__go" href="#schedule" data-dir-go="Full body">В расписании →</a></p>
+          <li class="lu">
+            <button class="lu__head" type="button" aria-expanded="false" aria-controls="lu-5">
+              <span class="lu__num">05</span>
+              <span class="lu__name">Full body</span>
+              <span class="lu__week" aria-label="Когда: Пн 19:00, Ср 19:00, Пт 19:00, Вс 18:00"><span class="lu__d is-on"><b>Пн</b><i>19:00</i></span><span class="lu__d"><b>Вт</b></span><span class="lu__d is-on"><b>Ср</b><i>19:00</i></span><span class="lu__d"><b>Чт</b></span><span class="lu__d is-on"><b>Пт</b><i>19:00</i></span><span class="lu__d"><b>Сб</b></span><span class="lu__d is-on"><b>Вс</b><i>18:00</i></span></span>
+              <span class="lu__lvl" data-lvl="3"><i></i><i></i><i></i><em>Жарко</em></span>
+              <span class="lu__plus" aria-hidden="true"></span>
+            </button>
+            <div class="lu__panel" id="lu-5" role="region" aria-label="Full body">
+              <div class="lu__inner">
+                <p class="lu__text">Все группы мышц за одно занятие: силовые блоки чередуются с кардио. Хорошо для общей формы.</p>
+                <div class="lu__acts">
+                  <a class="btn btn--red btn--sm" href="#schedule" data-dir-go="Full body">Смотреть в расписании</a>
+                  <button class="btn btn--ghost btn--sm" type="button" data-book data-book-label="Full body — пробное занятие">Записаться на пробное</button>
+                </div>
+              </div>
+            </div>
           </li>
-          <li class="dcard">
-            <h3 class="dcard__name">Ягодицы&nbsp;+ пресс</h3>
-            <p class="dcard__text">Акцент на ягодицы, бёдра и пресс: упражнения с резинками, весом и на коврике.</p>
-            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="2"><i></i><i></i><i></i>Средне</span><a class="dcard__go" href="#schedule" data-dir-go="Ягодицы + пресс">В расписании →</a></p>
+          <li class="lu">
+            <button class="lu__head" type="button" aria-expanded="false" aria-controls="lu-6">
+              <span class="lu__num">06</span>
+              <span class="lu__name">Ягодицы&nbsp;+ пресс</span>
+              <span class="lu__week" aria-label="Когда: Чт 19:00, Сб 16:30"><span class="lu__d"><b>Пн</b></span><span class="lu__d"><b>Вт</b></span><span class="lu__d"><b>Ср</b></span><span class="lu__d is-on"><b>Чт</b><i>19:00</i></span><span class="lu__d"><b>Пт</b></span><span class="lu__d is-on"><b>Сб</b><i>16:30</i></span><span class="lu__d"><b>Вс</b></span></span>
+              <span class="lu__lvl" data-lvl="2"><i></i><i></i><i></i><em>Средне</em></span>
+              <span class="lu__plus" aria-hidden="true"></span>
+            </button>
+            <div class="lu__panel" id="lu-6" role="region" aria-label="Ягодицы + пресс">
+              <div class="lu__inner">
+                <p class="lu__text">Акцент на ягодицы, бёдра и пресс: упражнения с резинками, весом и на коврике.</p>
+                <div class="lu__acts">
+                  <a class="btn btn--red btn--sm" href="#schedule" data-dir-go="Ягодицы + пресс">Смотреть в расписании</a>
+                  <button class="btn btn--ghost btn--sm" type="button" data-book data-book-label="Ягодицы + пресс — пробное занятие">Записаться на пробное</button>
+                </div>
+              </div>
+            </div>
           </li>
-          <li class="dcard">
-            <h3 class="dcard__name">Йога</h3>
-            <p class="dcard__text">Асаны, дыхание и баланс. Гибкость и сила без спешки, голова отдыхает вместе с телом.</p>
-            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="1"><i></i><i></i><i></i>Мягко</span><a class="dcard__go" href="#schedule" data-dir-go="Йога">В расписании →</a></p>
+          <li class="lu">
+            <button class="lu__head" type="button" aria-expanded="false" aria-controls="lu-7">
+              <span class="lu__num">07</span>
+              <span class="lu__name">Йога</span>
+              <span class="lu__week" aria-label="Когда: Вт 08:15, Чт 08:15"><span class="lu__d"><b>Пн</b></span><span class="lu__d is-on"><b>Вт</b><i>08:15</i></span><span class="lu__d"><b>Ср</b></span><span class="lu__d is-on"><b>Чт</b><i>08:15</i></span><span class="lu__d"><b>Пт</b></span><span class="lu__d"><b>Сб</b></span><span class="lu__d"><b>Вс</b></span></span>
+              <span class="lu__lvl" data-lvl="1"><i></i><i></i><i></i><em>Мягко</em></span>
+              <span class="lu__plus" aria-hidden="true"></span>
+            </button>
+            <div class="lu__panel" id="lu-7" role="region" aria-label="Йога">
+              <div class="lu__inner">
+                <p class="lu__text">Асаны, дыхание и баланс. Гибкость и сила без спешки, голова отдыхает вместе с телом.</p>
+                <div class="lu__acts">
+                  <a class="btn btn--red btn--sm" href="#schedule" data-dir-go="Йога">Смотреть в расписании</a>
+                  <button class="btn btn--ghost btn--sm" type="button" data-book data-book-label="Йога — пробное занятие">Записаться на пробное</button>
+                </div>
+              </div>
+            </div>
           </li>
-          <li class="dcard">
-            <h3 class="dcard__name">Табата</h3>
-            <p class="dcard__text">Интервалы: 20 секунд работы на максимум, 10 секунд отдыха, 8 раундов. Коротко, жарко, на выносливость.</p>
-            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="3"><i></i><i></i><i></i>Интенсивно</span><a class="dcard__go" href="#schedule" data-dir-go="Табата">В расписании →</a></p>
+          <li class="lu">
+            <button class="lu__head" type="button" aria-expanded="false" aria-controls="lu-8">
+              <span class="lu__num">08</span>
+              <span class="lu__name">Табата</span>
+              <span class="lu__week" aria-label="Когда: Сб 13:30"><span class="lu__d"><b>Пн</b></span><span class="lu__d"><b>Вт</b></span><span class="lu__d"><b>Ср</b></span><span class="lu__d"><b>Чт</b></span><span class="lu__d"><b>Пт</b></span><span class="lu__d is-on"><b>Сб</b><i>13:30</i></span><span class="lu__d"><b>Вс</b></span></span>
+              <span class="lu__lvl" data-lvl="3"><i></i><i></i><i></i><em>Жарко</em></span>
+              <span class="lu__plus" aria-hidden="true"></span>
+            </button>
+            <div class="lu__panel" id="lu-8" role="region" aria-label="Табата">
+              <div class="lu__inner">
+                <p class="lu__text">Интервалы: 20 секунд работы на максимум, 10 секунд отдыха, 8 раундов. Коротко, жарко, на выносливость.</p>
+                <div class="lu__acts">
+                  <a class="btn btn--red btn--sm" href="#schedule" data-dir-go="Табата">Смотреть в расписании</a>
+                  <button class="btn btn--ghost btn--sm" type="button" data-book data-book-label="Табата — пробное занятие">Записаться на пробное</button>
+                </div>
+              </div>
+            </div>
           </li>
-          <li class="dcard">
-            <h3 class="dcard__name">МФР&nbsp;+ стретчинг</h3>
-            <p class="dcard__text">Миофасциальный релиз: раскатываем мышцы на роллах и мячах, затем растягиваемся. Снимает напряжение и ускоряет восстановление.</p>
-            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="1"><i></i><i></i><i></i>Мягко</span><a class="dcard__go" href="#schedule" data-dir-go="МФР + стретчинг">В расписании →</a></p>
+          <li class="lu">
+            <button class="lu__head" type="button" aria-expanded="false" aria-controls="lu-9">
+              <span class="lu__num">09</span>
+              <span class="lu__name">МФР&nbsp;+ стретчинг</span>
+              <span class="lu__week" aria-label="Когда: Вс 14:00"><span class="lu__d"><b>Пн</b></span><span class="lu__d"><b>Вт</b></span><span class="lu__d"><b>Ср</b></span><span class="lu__d"><b>Чт</b></span><span class="lu__d"><b>Пт</b></span><span class="lu__d"><b>Сб</b></span><span class="lu__d is-on"><b>Вс</b><i>14:00</i></span></span>
+              <span class="lu__lvl" data-lvl="1"><i></i><i></i><i></i><em>Мягко</em></span>
+              <span class="lu__plus" aria-hidden="true"></span>
+            </button>
+            <div class="lu__panel" id="lu-9" role="region" aria-label="МФР + стретчинг">
+              <div class="lu__inner">
+                <p class="lu__text">Миофасциальный релиз: раскатываем мышцы на роллах и мячах, затем растягиваемся. Снимает напряжение и ускоряет восстановление.</p>
+                <div class="lu__acts">
+                  <a class="btn btn--red btn--sm" href="#schedule" data-dir-go="МФР + стретчинг">Смотреть в расписании</a>
+                  <button class="btn btn--ghost btn--sm" type="button" data-book data-book-label="МФР + стретчинг — пробное занятие">Записаться на пробное</button>
+                </div>
+              </div>
+            </div>
           </li>
-          <li class="dcard">
-            <h3 class="dcard__name">Восточные танцы</h3>
-            <p class="dcard__text">Танцевальные связки, работа бёдрами и корпусом. Пластика, осанка и хорошее настроение.</p>
-            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="2"><i></i><i></i><i></i>Средне</span><a class="dcard__go" href="#schedule" data-dir-go="Восточные танцы">В расписании →</a></p>
+          <li class="lu">
+            <button class="lu__head" type="button" aria-expanded="false" aria-controls="lu-10">
+              <span class="lu__num">10</span>
+              <span class="lu__name">Восточные танцы</span>
+              <span class="lu__week" aria-label="Когда: Чт 20:00, Вс 15:00"><span class="lu__d"><b>Пн</b></span><span class="lu__d"><b>Вт</b></span><span class="lu__d"><b>Ср</b></span><span class="lu__d is-on"><b>Чт</b><i>20:00</i></span><span class="lu__d"><b>Пт</b></span><span class="lu__d"><b>Сб</b></span><span class="lu__d is-on"><b>Вс</b><i>15:00</i></span></span>
+              <span class="lu__lvl" data-lvl="2"><i></i><i></i><i></i><em>Средне</em></span>
+              <span class="lu__plus" aria-hidden="true"></span>
+            </button>
+            <div class="lu__panel" id="lu-10" role="region" aria-label="Восточные танцы">
+              <div class="lu__inner">
+                <p class="lu__text">Танцевальные связки, работа бёдрами и корпусом. Пластика, осанка и хорошее настроение.</p>
+                <div class="lu__acts">
+                  <a class="btn btn--red btn--sm" href="#schedule" data-dir-go="Восточные танцы">Смотреть в расписании</a>
+                  <button class="btn btn--ghost btn--sm" type="button" data-book data-book-label="Восточные танцы — пробное занятие">Записаться на пробное</button>
+                </div>
+              </div>
+            </div>
           </li>
-      </ul>
+      </ol>
     </section>
 
     <!-- 3. РАСПИСАНИЕ -->
