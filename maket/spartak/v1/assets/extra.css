@@ -1,0 +1,47 @@
+/* Дополнения после созвона 19.11 */
+
+/* Форматы: преимущества мини-группы, вторая ссылка */
+.frow__text + .frow__text { margin-top: 8px; }
+.frow__text b { color: var(--text); font-weight: 600; }
+.frow__plus { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; max-width: 46ch; color: var(--mute); }
+.frow__plus li { position: relative; padding-left: 22px; }
+.frow__plus li::before { content: ""; position: absolute; left: 0; top: .62em; width: 12px; height: 3px; background: var(--red); transform: skewX(var(--skew)); }
+.frow__main .frow__link { margin-right: 24px; }
+
+/* Направления */
+.dirs { padding: var(--s8) 0 var(--s9); background: var(--paper-2); }
+.dgrid { list-style: none; padding: 0 var(--gutter); margin: var(--s7) auto 0; max-width: var(--maxw); display: grid; grid-template-columns: minmax(0, 1fr); gap: 1px; }
+.dcard { background: var(--paper); padding: var(--s5) var(--s5) var(--s4); display: flex; flex-direction: column; position: relative; }
+.dcard::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--red); transform: scaleY(0); transform-origin: top; transition: transform .4s var(--ease-out); }
+.dcard__name { font: italic 800 var(--fs-h3)/1 var(--display); text-transform: uppercase; letter-spacing: -.005em; }
+.dcard__text { color: var(--mute); margin-top: 10px; flex: 1; }
+.dcard__foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: var(--s4); padding-top: 12px; border-top: 1px solid var(--line); }
+.dcard__lvl { display: inline-flex; align-items: center; gap: 3px; font-size: var(--fs-small); color: var(--mute); }
+.dcard__lvl i { width: 10px; height: 10px; background: var(--line); transform: skewX(var(--skew)); }
+.dcard__lvl i:last-of-type { margin-right: 6px; }
+.dcard__lvl[data-lvl="1"] i:nth-of-type(-n+1),
+.dcard__lvl[data-lvl="2"] i:nth-of-type(-n+2),
+.dcard__lvl[data-lvl="3"] i:nth-of-type(-n+3) { background: var(--red); }
+.dcard__go { color: var(--red-ink); font-weight: 600; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; white-space: nowrap; }
+@media (hover: hover) and (pointer: fine) {
+  .dcard:hover::before { transform: none; }
+  .dcard__go:hover { text-decoration: underline; text-underline-offset: 3px; }
+}
+@media (min-width: 640px) { .dgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .dgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1400px) { .dgrid { grid-template-columns: repeat(5, minmax(0, 1fr)); } .dcard__name { font-size: 1.8rem; } }
+
+/* Форма заявки в шторке */
+.lead { margin-top: var(--s5); display: grid; gap: 12px; }
+.lead__f { display: grid; gap: 6px; font-size: var(--fs-small); font-weight: 500; color: var(--mute); }
+.lead__f input { font: 400 1rem/1.2 var(--sans); color: var(--text); background: var(--white); border: 0; border-radius: var(--r-2); box-shadow: inset 0 0 0 1.5px var(--line); min-height: 50px; padding: 0 14px; transition: box-shadow var(--t-ui) ease; }
+.lead__f input:focus { outline: none; box-shadow: inset 0 0 0 2px var(--text); }
+.lead__ok { display: grid; grid-template-columns: 20px 1fr; gap: 10px; align-items: start; font-size: var(--fs-small); color: var(--mute); cursor: pointer; }
+.lead__ok input { width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--red); }
+.lead__ok a { color: var(--text); }
+.lead__err { color: var(--red-ink); font-size: var(--fs-small); font-weight: 500; }
+.lead .btn { margin-top: 4px; }
+
+/* Подвал */
+.foot a { color: inherit; text-underline-offset: 3px; }
+.foot a:hover { color: var(--white); }

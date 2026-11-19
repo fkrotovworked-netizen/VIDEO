@@ -14,6 +14,8 @@
   <link rel="preload" as="image" href="./img/cardio-mono-800.webp" imagesrcset="./img/cardio-mono-800.webp 800w, ./img/cardio-mono-1600.webp 1600w" imagesizes="(min-width: 900px) 46vw, 100vw" fetchpriority="high">
   <script type="module" crossorigin src="./assets/index-BLCElL-H.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-C3evbG9B.css">
+  <link rel="stylesheet" href="./assets/extra.css">
+  <script src="./assets/extra.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#schedule">К расписанию</a>
@@ -27,6 +29,7 @@
       <a href="#schedule">Расписание</a>
       <a href="#formats">Цены</a>
       <a href="#contacts">Контакты</a>
+      <a href="https://vk.ru/spartakfitnes" target="_blank" rel="noopener">ВКонтакте ↗</a>
     </nav>
     <a class="bar__tel" href="tel:+79505698022">+7 950 569-80-22</a>
     <button class="btn btn--red btn--sm" type="button" data-book>Записаться</button>
@@ -53,8 +56,8 @@
       </figure>
 
       <div class="hero__copy" data-hero-in>
-        <p class="hero__lede">Фитнес по&nbsp;приемлемым ценам.</p>
-        <p class="hero__sub">Групповые тренировки, мини-группы по&nbsp;4–5 человек в&nbsp;тренажёрном зале, персональные и&nbsp;самостоятельные занятия.</p>
+        <p class="hero__lede">Фитнес по&nbsp;приемлемым ценам</p>
+        <p class="hero__sub">Групповые тренировки, мини-группы в&nbsp;тренажёрном зале, персональные и&nbsp;самостоятельные занятия.</p>
         <div class="hero__actions">
           <a class="btn btn--red" href="#schedule">Расписание недели</a>
           <button class="btn btn--ghost" type="button" data-book data-book-label="Пробная тренировка">Пробное — от 200 ₽</button>
@@ -82,7 +85,8 @@
             <span class="frow__num">01</span>
             <div class="frow__main">
               <h3 class="frow__name">Групповые</h3>
-              <p class="frow__text">Пилатес, стретчинг, здоровая спина, суперскульпт, Full body, ягодицы&nbsp;+&nbsp;пресс, йога, табата, МФР, восточные танцы.</p>
+              <p class="frow__text">Пилатес, Стретчинг, Здоровая спина, Суперскульпт, Full body, Ягодицы&nbsp;+&nbsp;пресс, Йога, Табата, МФР&nbsp;+&nbsp;стретчинг, Восточные танцы.</p>
+              <a class="frow__link" href="#directions">Что за направления →</a>
               <a class="frow__link" href="#schedule" data-goto="group">26 занятий в расписании →</a>
             </div>
             <dl class="price">
@@ -96,7 +100,12 @@
             <span class="frow__num">02</span>
             <div class="frow__main">
               <h3 class="frow__name">Мини-группа в&nbsp;тренажёрном зале</h3>
-              <p class="frow__text">Тренировка в&nbsp;группе 4–5 человек с&nbsp;тренером: техника под присмотром, но&nbsp;дешевле персональной.</p>
+              <p class="frow__text">Занятие в&nbsp;тренажёрном зале с&nbsp;тренером в&nbsp;небольшой группе.</p>
+              <ul class="frow__plus">
+                <li>Тренер ставит технику и&nbsp;следит за&nbsp;каждым подходом — меньше риск травмы.</li>
+                <li>Веса и&nbsp;упражнения подбирают под вас, даже если вы&nbsp;впервые в&nbsp;зале.</li>
+                <li>Почти вдвое дешевле персональной: 700&nbsp;₽ вместо 1&nbsp;200&nbsp;₽.</li>
+              </ul>
               <a class="frow__link" href="#schedule" data-goto="mini">32 занятия в расписании →</a>
             </div>
             <dl class="price">
@@ -110,7 +119,8 @@
             <span class="frow__num">03</span>
             <div class="frow__main">
               <h3 class="frow__name">Персонально</h3>
-              <p class="frow__text">Один на&nbsp;один с&nbsp;тренером. Или СПЛИТ — тренировка вдвоём с&nbsp;одним тренером.</p>
+              <p class="frow__text">Тренировка с&nbsp;тренером по&nbsp;программе под вашу цель.</p>
+              <p class="frow__text"><b>СПЛИТ</b> — сплит-тренировка вдвоём с&nbsp;тренером: с&nbsp;подругой, партнёром или другом.</p>
               <button class="frow__link" type="button" data-book data-book-label="Персональная тренировка">Записаться на пробное →</button>
             </div>
             <dl class="price">
@@ -154,6 +164,66 @@
       <p class="fine">Цены — по прайсу в группе клуба ВКонтакте. Полный прайс, абонементы и клубные карты — у администратора.</p>
     </section>
 
+    <!-- 2.5 НАПРАВЛЕНИЯ -->
+    <section class="dirs" id="directions" aria-labelledby="dirs-title">
+      <div class="head">
+        <p class="kicker">Групповые направления</p>
+        <h2 class="h2" id="dirs-title" data-lines>Десять направлений — от&nbsp;мягких до&nbsp;жарких</h2>
+      </div>
+      <ul class="dgrid">
+          <li class="dcard">
+            <h3 class="dcard__name">Пилатес</h3>
+            <p class="dcard__text">Спокойные, точные упражнения на мышцы кора: живот, спину, ягодицы. Выравнивает осанку, подходит для старта с нуля.</p>
+            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="1"><i></i><i></i><i></i>Мягко</span><a class="dcard__go" href="#schedule" data-dir-go="Пилатес">В расписании →</a></p>
+          </li>
+          <li class="dcard">
+            <h3 class="dcard__name">Стретчинг</h3>
+            <p class="dcard__text">Растяжка всего тела. Мягко возвращает гибкость, снимает зажатость после рабочего дня и силовых.</p>
+            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="1"><i></i><i></i><i></i>Мягко</span><a class="dcard__go" href="#schedule" data-dir-go="Стретчинг">В расписании →</a></p>
+          </li>
+          <li class="dcard">
+            <h3 class="dcard__name">Здоровая спина</h3>
+            <p class="dcard__text">Укрепляем мышцы спины и шеи без нагрузки на позвоночник. Для тех, кто много сидит и устаёт от поясницы.</p>
+            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="1"><i></i><i></i><i></i>Мягко</span><a class="dcard__go" href="#schedule" data-dir-go="Здоровая спина">В расписании →</a></p>
+          </li>
+          <li class="dcard">
+            <h3 class="dcard__name">Суперскульпт</h3>
+            <p class="dcard__text">Силовая на всё тело с отягощениями и собственным весом. Много повторений — тонус и рельеф.</p>
+            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="2"><i></i><i></i><i></i>Средне</span><a class="dcard__go" href="#schedule" data-dir-go="Суперскульпт">В расписании →</a></p>
+          </li>
+          <li class="dcard">
+            <h3 class="dcard__name">Full body</h3>
+            <p class="dcard__text">Все группы мышц за одно занятие: силовые блоки чередуются с кардио. Хорошо для общей формы.</p>
+            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="3"><i></i><i></i><i></i>Интенсивно</span><a class="dcard__go" href="#schedule" data-dir-go="Full body">В расписании →</a></p>
+          </li>
+          <li class="dcard">
+            <h3 class="dcard__name">Ягодицы&nbsp;+ пресс</h3>
+            <p class="dcard__text">Акцент на ягодицы, бёдра и пресс: упражнения с резинками, весом и на коврике.</p>
+            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="2"><i></i><i></i><i></i>Средне</span><a class="dcard__go" href="#schedule" data-dir-go="Ягодицы + пресс">В расписании →</a></p>
+          </li>
+          <li class="dcard">
+            <h3 class="dcard__name">Йога</h3>
+            <p class="dcard__text">Асаны, дыхание и баланс. Гибкость и сила без спешки, голова отдыхает вместе с телом.</p>
+            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="1"><i></i><i></i><i></i>Мягко</span><a class="dcard__go" href="#schedule" data-dir-go="Йога">В расписании →</a></p>
+          </li>
+          <li class="dcard">
+            <h3 class="dcard__name">Табата</h3>
+            <p class="dcard__text">Интервалы: 20 секунд работы на максимум, 10 секунд отдыха, 8 раундов. Коротко, жарко, на выносливость.</p>
+            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="3"><i></i><i></i><i></i>Интенсивно</span><a class="dcard__go" href="#schedule" data-dir-go="Табата">В расписании →</a></p>
+          </li>
+          <li class="dcard">
+            <h3 class="dcard__name">МФР&nbsp;+ стретчинг</h3>
+            <p class="dcard__text">Миофасциальный релиз: раскатываем мышцы на роллах и мячах, затем растягиваемся. Снимает напряжение и ускоряет восстановление.</p>
+            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="1"><i></i><i></i><i></i>Мягко</span><a class="dcard__go" href="#schedule" data-dir-go="МФР + стретчинг">В расписании →</a></p>
+          </li>
+          <li class="dcard">
+            <h3 class="dcard__name">Восточные танцы</h3>
+            <p class="dcard__text">Танцевальные связки, работа бёдрами и корпусом. Пластика, осанка и хорошее настроение.</p>
+            <p class="dcard__foot"><span class="dcard__lvl" data-lvl="2"><i></i><i></i><i></i>Средне</span><a class="dcard__go" href="#schedule" data-dir-go="Восточные танцы">В расписании →</a></p>
+          </li>
+      </ul>
+    </section>
+
     <!-- 3. РАСПИСАНИЕ -->
     <section class="sched" id="schedule" aria-labelledby="sched-title" data-sched>
       <div class="head head--row">
@@ -188,7 +258,7 @@
       <div class="contacts__lead">
         <p class="kicker kicker--light">Запись и контакты</p>
         <h2 class="h2 h2--light" id="contacts-title" data-lines>Первомайская,&nbsp;9</h2>
-        <p class="contacts__text">Пробная групповая тренировка — 200&nbsp;₽. Напишите в&nbsp;ВКонтакте или позвоните — подберём время и&nbsp;тренера.</p>
+        <p class="contacts__text">Пробная групповая тренировка — 200&nbsp;₽. Оставьте заявку — она придёт администратору во&nbsp;ВКонтакте, подберём время и&nbsp;тренера.</p>
         <div class="contacts__actions">
           <button class="btn btn--red" type="button" data-book data-book-label="Пробная тренировка">Записаться на пробное</button>
           <a class="btn btn--ghost" href="https://vk.ru/spartakfitnes" target="_blank" rel="noopener">Группа ВКонтакте</a>
@@ -227,6 +297,8 @@
 
   <footer class="foot">
     <span>© Фитнес-центр «Спартак», Сыктывкар</span>
+    <a href="https://vk.ru/spartakfitnes" target="_blank" rel="noopener">Группа ВКонтакте</a>
+    <a href="./privacy.html">Политика конфиденциальности</a>
     <span>Прототип сайта. Данные — из группы клуба ВКонтакте на 10.11.2026.</span>
   </footer>
 
@@ -241,12 +313,23 @@
       <p class="kicker" data-sheet-kicker>Запись</p>
       <h2 class="sheet__title" id="sheet-title" data-sheet-title>Пробная тренировка</h2>
       <p class="sheet__meta" data-sheet-meta></p>
-      <div class="sheet__actions">
-        <a class="btn btn--red btn--wide" href="https://vk.me/spartakfitnes" target="_blank" rel="noopener" data-sheet-vk>Написать в ВКонтакте</a>
-        <a class="btn btn--line btn--wide" href="https://vk.ru/app5619682_-177451373#815879" target="_blank" rel="noopener">Заполнить анкету записи</a>
-        <a class="btn btn--line btn--wide" href="tel:+79505698022">Позвонить: +7 950 569-80-22</a>
-      </div>
-      <p class="sheet__hint" data-sheet-hint>Текст заявки скопируем — останется вставить его в&nbsp;сообщение.</p>
+      <form class="lead" data-lead novalidate>
+        <label class="lead__f">
+          <span>Имя</span>
+          <input name="name" type="text" autocomplete="given-name" placeholder="Как к вам обращаться" required>
+        </label>
+        <label class="lead__f">
+          <span>Телефон</span>
+          <input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+        </label>
+        <label class="lead__ok">
+          <input name="consent" type="checkbox" required>
+          <span>Согласен(на) на&nbsp;обработку персональных данных по&nbsp;<a href="./privacy.html" target="_blank">политике конфиденциальности</a></span>
+        </label>
+        <p class="lead__err" data-lead-err role="alert" hidden></p>
+        <button class="btn btn--red btn--wide" type="submit" data-sheet-vk>Отправить заявку во&nbsp;ВКонтакте</button>
+      </form>
+      <p class="sheet__hint" data-sheet-hint>Откроем чат клуба во&nbsp;ВКонтакте, текст заявки с&nbsp;телефоном уже будет скопирован — вставьте его и&nbsp;отправьте. Администратор перезвонит.</p>
     </div>
   </dialog>
 
