@@ -88,3 +88,74 @@
 .foot a { color: inherit; text-underline-offset: 3px; }
 .foot a:hover { color: var(--white); }
 .dirs .h2 { max-width: 20ch; }
+
+/* Зал и оборудование — фото от клуба (20.11) */
+.gym { padding: var(--s8) 0 var(--s9); }
+.gym__note { color: var(--mute); max-width: 34ch; font-size: var(--fs-small); }
+.gym__grid {
+  list-style: none; margin: var(--s7) 0 0; padding: 0 var(--gutter);
+  display: grid; grid-auto-flow: column; grid-auto-columns: 76vw; gap: 10px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 var(--gutter);
+  overscroll-behavior-x: contain; scrollbar-width: none;
+}
+.gym__grid::-webkit-scrollbar { display: none; }
+.gym__item { scroll-snap-align: start; min-width: 0; }
+.gym__btn {
+  position: relative; display: block; width: 100%; height: 100%; padding: 0; border: 0; background: var(--ink);
+  cursor: zoom-in; overflow: hidden; -webkit-tap-highlight-color: transparent;
+}
+.gym__btn img { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform .6s var(--ease-out), filter .4s ease; }
+.gym__btn::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, #0e0d0dcc 100%); pointer-events: none; }
+.gym__cap {
+  position: absolute; left: 12px; bottom: 12px; z-index: 1; display: inline-flex; align-items: baseline; gap: 10px;
+  padding: 7px 12px 6px; background: var(--red); color: var(--white);
+  font: italic 800 1.05rem/1 var(--display); text-transform: uppercase; letter-spacing: .01em;
+  transform: skewX(var(--skew)); transform-origin: left bottom;
+}
+.gym__cap > * { transform: skewX(calc(var(--skew) * -1)); }
+.gym__cap b { font-weight: 700; font-size: .8em; opacity: .75; font-variant-numeric: tabular-nums; }
+.gym__btn:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) {
+  .gym__btn:hover img { transform: scale(1.04); }
+}
+@media (min-width: 700px) {
+  .gym__grid {
+    max-width: var(--maxw); margin-left: auto; margin-right: auto; overflow: visible;
+    grid-auto-flow: row; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-columns: auto; gap: 12px;
+  }
+  .gym__item--big { grid-column: span 2; grid-row: span 2; }
+  .gym__item--big .gym__btn img { aspect-ratio: auto; }
+  .gym__item--big .gym__cap { font-size: 1.5rem; left: 18px; bottom: 18px; }
+}
+
+/* Просмотр фото */
+.gymbox { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: transparent; color: var(--white); overflow: hidden; }
+.gymbox::backdrop { background: #0e0d0df2; }
+.gymbox[open] { display: grid; place-items: center; animation: gymIn .25s var(--ease-out); }
+@keyframes gymIn { from { opacity: 0; } }
+.gymbox__fig { margin: 0; display: grid; justify-items: center; gap: 12px; padding: 56px 16px 20px; }
+.gymbox__img { display: block; max-width: min(92vw, 900px); max-height: calc(100dvh - 150px); width: auto; height: auto; object-fit: contain; background: #1a1818; }
+.gymbox__cap { text-align: center; font-size: var(--fs-small); color: var(--mute-light); }
+.gymbox__cap b { color: #ff4d55; font: italic 800 1rem/1 var(--display); margin-right: 4px; }
+.gymbox__cap span { font: italic 800 1.25rem/1 var(--display); text-transform: uppercase; color: var(--white); }
+.gymbox__cap em { display: block; font-style: normal; margin-top: 6px; }
+.gymbox__x, .gymbox__nav {
+  position: absolute; width: 48px; height: 48px; border: 0; border-radius: var(--r-pill); cursor: pointer;
+  background: #ffffff14; color: var(--white); font: 400 1.5rem/1 var(--sans); display: grid; place-items: center;
+  transition: background-color var(--t-ui) ease;
+}
+.gymbox__x { top: 12px; right: 12px; font-size: 2rem; }
+.gymbox__nav { top: 50%; margin-top: -24px; }
+.gymbox__nav--prev { left: 12px; }
+.gymbox__nav--next { right: 12px; }
+.gymbox__x:hover, .gymbox__nav:hover { background: var(--red); }
+.gymbox__x:focus-visible, .gymbox__nav:focus-visible { outline: 3px solid var(--white); outline-offset: 2px; }
+@media (max-width: 699px) {
+  .gymbox__nav { top: auto; bottom: 16px; margin-top: 0; }
+  .gymbox__fig { padding-bottom: 80px; }
+  .gymbox__img { max-height: calc(100dvh - 220px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gym__btn img { transition: none; }
+  .gymbox[open] { animation: none; }
+}

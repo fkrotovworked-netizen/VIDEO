@@ -28,6 +28,7 @@
     <nav class="bar__nav" aria-label="Разделы">
       <a href="#schedule">Расписание</a>
       <a href="#formats">Цены</a>
+      <a href="#gym">Зал</a>
       <a href="#contacts">Контакты</a>
       <a href="https://vk.ru/spartakfitnes" target="_blank" rel="noopener">ВКонтакте ↗</a>
     </nav>
@@ -162,6 +163,64 @@
         </aside>
       </div>
       <p class="fine">Цены — по прайсу в группе клуба ВКонтакте. Полный прайс, абонементы и клубные карты — у администратора.</p>
+    </section>
+
+    <!-- 2.4 ЗАЛ И ОБОРУДОВАНИЕ -->
+    <section class="gym" id="gym" aria-labelledby="gym-title">
+      <div class="head head--row">
+        <div>
+          <p class="kicker">Зал и оборудование</p>
+          <h2 class="h2" id="gym-title" data-lines>Тренажёрный и&nbsp;групповой залы</h2>
+        </div>
+        <p class="gym__note">Кардиозона, блочные тренажёры, машина Смита, гантельный ряд и&nbsp;отдельный зал для групповых — на&nbsp;Первомайской,&nbsp;9. Нажмите на&nbsp;фото, чтобы рассмотреть.</p>
+      </div>
+      <ul class="gym__grid" data-gym>
+        <li class="gym__item gym__item--big">
+          <button class="gym__btn" type="button" data-gym-open="0" data-full="./img/gym-hall-1200.webp" data-title="Основной зал" data-desc="Силовая зона: скамьи, стойки, тренажёры" aria-label="Открыть фото: Основной зал">
+            <img src="./img/gym-hall-600.webp" srcset="./img/gym-hall-600.webp 600w, ./img/gym-hall-1200.webp 1200w" sizes="(min-width: 700px) 66vw, 76vw" width="600" height="800" loading="lazy" decoding="async" alt="Основной зал: силовая зона: скамьи, стойки, тренажёры">
+            <span class="gym__cap"><b>01</b><span>Основной зал</span></span>
+          </button>
+        </li>
+        <li class="gym__item">
+          <button class="gym__btn" type="button" data-gym-open="1" data-full="./img/gym-cardio-1200.webp" data-title="Кардиозона" data-desc="Беговые дорожки, эллипсы, велотренажёр" aria-label="Открыть фото: Кардиозона">
+            <img src="./img/gym-cardio-600.webp" srcset="./img/gym-cardio-600.webp 600w, ./img/gym-cardio-1200.webp 1200w" sizes="(min-width: 700px) 33vw, 76vw" width="600" height="800" loading="lazy" decoding="async" alt="Кардиозона: беговые дорожки, эллипсы, велотренажёр">
+            <span class="gym__cap"><b>02</b><span>Кардиозона</span></span>
+          </button>
+        </li>
+        <li class="gym__item">
+          <button class="gym__btn" type="button" data-gym-open="2" data-full="./img/gym-blocks-1200.webp" data-title="Блочные тренажёры" data-desc="Кроссовер, тяги верхнего и нижнего блока" aria-label="Открыть фото: Блочные тренажёры">
+            <img src="./img/gym-blocks-600.webp" srcset="./img/gym-blocks-600.webp 600w, ./img/gym-blocks-1200.webp 1200w" sizes="(min-width: 700px) 33vw, 76vw" width="600" height="800" loading="lazy" decoding="async" alt="Блочные тренажёры: кроссовер, тяги верхнего и нижнего блока">
+            <span class="gym__cap"><b>03</b><span>Блочные тренажёры</span></span>
+          </button>
+        </li>
+        <li class="gym__item">
+          <button class="gym__btn" type="button" data-gym-open="3" data-full="./img/gym-free-1200.webp" data-title="Свободные веса" data-desc="Машина Смита, штанги, блины" aria-label="Открыть фото: Свободные веса">
+            <img src="./img/gym-free-600.webp" srcset="./img/gym-free-600.webp 600w, ./img/gym-free-1200.webp 1200w" sizes="(min-width: 700px) 33vw, 76vw" width="600" height="800" loading="lazy" decoding="async" alt="Свободные веса: машина смита, штанги, блины">
+            <span class="gym__cap"><b>04</b><span>Свободные веса</span></span>
+          </button>
+        </li>
+        <li class="gym__item">
+          <button class="gym__btn" type="button" data-gym-open="4" data-full="./img/gym-dumbbells-1200.webp" data-title="Гантельный ряд" data-desc="Гантели и регулируемые скамьи" aria-label="Открыть фото: Гантельный ряд">
+            <img src="./img/gym-dumbbells-600.webp" srcset="./img/gym-dumbbells-600.webp 600w, ./img/gym-dumbbells-1200.webp 1200w" sizes="(min-width: 700px) 33vw, 76vw" width="600" height="800" loading="lazy" decoding="async" alt="Гантельный ряд: гантели и регулируемые скамьи">
+            <span class="gym__cap"><b>05</b><span>Гантельный ряд</span></span>
+          </button>
+        </li>
+        <li class="gym__item">
+          <button class="gym__btn" type="button" data-gym-open="5" data-full="./img/gym-studio-1200.webp" data-title="Зал групповых программ" data-desc="Пилатес, стретчинг, йога, Суперскульпт — у зеркал, на ковриках" aria-label="Открыть фото: Зал групповых программ">
+            <img src="./img/gym-studio-600.webp" srcset="./img/gym-studio-600.webp 600w, ./img/gym-studio-1200.webp 1200w" sizes="(min-width: 700px) 33vw, 76vw" width="600" height="800" loading="lazy" decoding="async" alt="Зал групповых программ: пилатес, стретчинг, йога, суперскульпт — у зеркал, на ковриках">
+            <span class="gym__cap"><b>06</b><span>Зал групповых программ</span></span>
+          </button>
+        </li>
+      </ul>
+      <dialog class="gymbox" data-gymbox aria-label="Фото зала">
+        <figure class="gymbox__fig">
+          <img class="gymbox__img" data-gymbox-img alt="">
+          <figcaption class="gymbox__cap"><b data-gymbox-num></b> <span data-gymbox-title></span><em data-gymbox-desc></em></figcaption>
+        </figure>
+        <button class="gymbox__x" type="button" data-gymbox-close aria-label="Закрыть">×</button>
+        <button class="gymbox__nav gymbox__nav--prev" type="button" data-gymbox-step="-1" aria-label="Предыдущее фото">←</button>
+        <button class="gymbox__nav gymbox__nav--next" type="button" data-gymbox-step="1" aria-label="Следующее фото">→</button>
+      </dialog>
     </section>
 
     <!-- 2.5 НАПРАВЛЕНИЯ -->

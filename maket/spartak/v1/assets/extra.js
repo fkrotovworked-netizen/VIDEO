@@ -32,6 +32,49 @@
     });
   }
 
+
+  /* ---------- Зал: просмотр фото ---------- */
+  (function () {
+    var box = document.querySelector('[data-gymbox]');
+    var btns = document.querySelectorAll('[data-gym-open]');
+    if (!box || !btns.length || typeof box.showModal !== 'function') return;
+    var img = box.querySelector('[data-gymbox-img]');
+    var num = box.querySelector('[data-gymbox-num]');
+    var title = box.querySelector('[data-gymbox-title]');
+    var desc = box.querySelector('[data-gymbox-desc]');
+    var cur = 0, opener = null, x0 = null;
+    function show(i) {
+      cur = (i + btns.length) % btns.length;
+      var b = btns[cur];
+      img.src = b.getAttribute('data-full');
+      img.alt = b.querySelector('img').alt;
+      num.textContent = (cur < 9 ? '0' : '') + (cur + 1) + ' / ' + (btns.length < 10 ? '0' : '') + btns.length;
+      title.textContent = b.getAttribute('data-title');
+      desc.textContent = b.getAttribute('data-desc');
+    }
+    for (var i = 0; i < btns.length; i++) btns[i].addEventListener('click', function () {
+      opener = this;
+      show(+this.getAttribute('data-gym-open'));
+      box.showModal();
+    });
+    box.addEventListener('click', function (e) {
+      var s = e.target.closest('[data-gymbox-step]');
+      if (s) return show(cur + +s.getAttribute('data-gymbox-step'));
+      if (e.target.closest('[data-gymbox-close]') || e.target === box || e.target.classList.contains('gymbox__fig')) box.close();
+    });
+    box.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') show(cur + 1);
+      else if (e.key === 'ArrowLeft') show(cur - 1);
+    });
+    box.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    box.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
+    });
+    box.addEventListener('close', function () { if (opener) opener.focus(); });
+  })();
+
   /* ---------- Форма заявки ---------- */
   var form = document.querySelector('[data-lead]');
   if (!form) return;
